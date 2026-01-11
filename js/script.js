@@ -12,8 +12,7 @@ function entrarComoAutor() {
 // Função para lidar com o Leitor
 function entrarComoLeitor() {
     console.log("Modo Leitor ativado!");
-    alert("Bem-vindo, Viajante!");
-    // Futuramente: window.location.href = 'biblioteca.html';
+    window.location.href = 'leitor.html';
 }
 
 // Adicionando os ouvintes de evento (Clicks)

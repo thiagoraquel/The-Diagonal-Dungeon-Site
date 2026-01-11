@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Leitura</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: block; /* Remove o display flex centralizado da home */
+            padding: 20px;
+        }
+
+        .layout-leitor {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* Menu lateral + Conteúdo */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: calc(100vh - 40px);
+        }
+
+        /* Menu Lateral de Capítulos */
+        aside {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-y: auto; /* Scroll se tiver muitos capítulos */
+        }
+
+        aside h3 {
+            margin-bottom: 15px;
+            border-bottom: 2px solid #00b894;
+            padding-bottom: 5px;
+        }
+
+        .btn-capitulo {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            text-align: left;
+            background: #f0f2f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-capitulo:hover {
+            background: #dfe6e9;
+            padding-left: 15px; /* Efeitinho de deslizar */
+        }
+
+        /* Área de Leitura */
+        .area-leitura {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+
+        /* Classe que o Quill usa para o conteúdo. 
+           Vamos aumentar a fonte para ficar gostoso de ler */
+        .ql-editor {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #2d3436;
+            font-family: 'Georgia', serif; /* Fonte mais literária */
+        }
+        
+        .aviso-vazio {
+            text-align: center;
+            color: #636e72;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-leitor">
+        <aside>
+            <a href="index.html" class="btn" style="margin-bottom: 20px; width: 100%; text-align: center;">Voltar ao Início</a>
+            <h3>Capítulos</h3>
+            <div id="lista-capitulos">
+                </div>
+        </aside>
+
+        <main class="area-leitura">
+            <h1 id="titulo-leitura" style="margin-bottom: 20px; display: none;"></h1>
+            
+            <div id="conteudo-leitura" class="ql-editor">
+                <div class="aviso-vazio">
+                    <p>👈 Selecione um capítulo ao lado para começar a ler.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/leitor.js"></script>
+</body>
+</html>
