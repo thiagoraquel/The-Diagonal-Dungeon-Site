@@ -5,8 +5,8 @@ const btnLeitor = document.getElementById('btn-leitor');
 // Função para lidar com o Autor
 function entrarComoAutor() {
     console.log("Modo Autor ativado!");
-    alert("Bem-vindo, Criador de Mundos!");
-    // Futuramente: window.location.href = 'painel-autor.html';
+    // Redireciona para a nova página
+    window.location.href = 'autor.html'; 
 }
 
 // Função para lidar com o Leitor

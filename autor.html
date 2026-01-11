@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Autor</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    
+    <style>
+        /* CSS Específico desta página */
+        body {
+            /* Mudamos para block pois não queremos centralizar tudo no meio da tela como na home */
+            display: block; 
+            padding: 20px;
+        }
+
+        .painel-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #editor-container {
+            height: 400px; /* Altura da área de texto */
+            background: #fff;
+        }
+
+        .controles {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="painel-container">
+        <header>
+            <h2>Novo Capítulo</h2>
+            <a href="index.html" class="btn" style="background-color: #fab1a0;">Voltar</a>
+        </header>
+
+        <input type="text" id="titulo-capitulo" placeholder="Título do Capítulo" 
+               style="width: 100%; padding: 10px; margin-bottom: 10px; font-size: 1.2rem;">
+
+        <div id="editor-container"></div>
+
+        <div class="controles">
+            <button id="btn-salvar" class="btn" style="background-color: #00b894;">Salvar Capítulo</button>
+            <button id="btn-limpar" class="btn" style="background-color: #ff7675;">Limpar</button>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <h3>Capítulos Salvos:</h3>
+            <ul id="lista-capitulos"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    
+    <script src="js/autor.js"></script>
+</body>
+</html>
