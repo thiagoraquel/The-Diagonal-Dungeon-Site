@@ -1,0 +1,80 @@
+/* Reset básico para tirar margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000f25;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.botoes-wrapper {
+    display: flex;
+    flex-direction: column; /* Botões um embaixo do outro */
+    gap: 1rem; /* Espaço entre os botões */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Estilo específico para o Autor */
+#btn-autor {
+    background-color: #6c5ce7;
+    color: white;
+}
+
+#btn-autor:hover {
+    background-color: #5b4cc4;
+}
+
+/* Estilo específico para o Leitor */
+#btn-leitor {
+    background-color: #00b894;
+    color: white;
+}
+
+#btn-leitor:hover {
+    background-color: #019577;
+}
+
+/* Efeito de clique */
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ... seus códigos anteriores ... */
+
+.logo {
+    width: 80px; /* Define um tamanho fixo legal */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 1.5rem; /* Empurra o título "Você é..." para baixo */
+    opacity: 0.9; /* Deixa levemente transparente (opcional, fica charmoso) */
+}
+
+/* ... restante do código ... */
